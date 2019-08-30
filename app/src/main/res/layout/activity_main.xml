@@ -14,6 +14,8 @@
         android:layout_height="wrap_content">
 
         <TextView
+
+            android:layout_gravity="center"
             android:id="@+id/txtday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -24,8 +26,9 @@
             android:textStyle="bold" />
 
         <TextView
+            android:layout_gravity="center"
             android:layout_marginTop="40dp"
-            android:textStyle="bold"
+            android:textStyle="normal"
             android:textColor="#fff"
             android:id="@+id/txtcity"
             android:textSize="30sp"
@@ -35,8 +38,9 @@
 
 
         <TextView
+            android:layout_gravity="center"
             android:layout_marginTop="40dp"
-            android:textStyle="bold"
+            android:textStyle="normal"
             android:textColor="#fff"
             android:id="@+id/txtweather"
             android:textSize="30sp"
@@ -44,12 +48,13 @@
             android:layout_height="wrap_content" />
 
         <TextView
+            android:layout_gravity="center"
             android:textStyle="italic"
             android:text=""
             android:layout_marginTop="20dp"
             android:textColor="#fff"
             android:id="@+id/txtDescription"
-            android:textSize="30sp"
+            android:textSize="20sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -57,36 +62,46 @@
 
 
         <TextView
+            android:layout_gravity="center"
+            android:textStyle="italic"
             android:text="temp "
             android:id="@+id/txtMainTemp"
             android:textColor="#fff"
             android:layout_marginTop="40dp"
-            android:textSize="30sp"
+            android:textSize="20sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-
 
 
         <TextView
             android:id="@+id/txtWindSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:textStyle="italic"
+            android:text="wind Speed :"
             android:textColor="#fff"
             android:textSize="20sp"
-            android:layout_marginRight="150dp"
-            android:text="wind Speed :"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:textStyle="italic" />
+
+
+        <ImageView
+            android:id="@+id/imgWeatherIcon"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:scaleType="centerCrop" />
 
 
 
 
         <Button
-            android:id="@+id/btnForcast"
+            android:id="@+id/btnForecast"
             android:layout_width="417dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Forcast" />
+            android:text="Forecast" />
 
 
 

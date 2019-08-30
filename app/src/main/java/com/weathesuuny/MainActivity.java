@@ -29,8 +29,6 @@ public class MainActivity extends AppCompatActivity {
     String weatherType;
     String weatherDescription;
     String weatherIcon;
-    Integer minTemp;
-    Integer maxTemp;
     Double mainTemp;
     Double windSpeed;
     String iconUrl;
@@ -39,8 +37,6 @@ public class MainActivity extends AppCompatActivity {
     TextView txtWeatherType;
     TextView txtWeatherDescription;
     ImageView imgWeatherIcon;
-    TextView txtMinTemp;
-    TextView txtMaxTemp;
     TextView txtMainTemp;
     TextView txtWindSpeed;
 
@@ -93,7 +89,6 @@ public class MainActivity extends AppCompatActivity {
                     txtWeatherDescription.setText(weatherDescription);
                     iconUrl = "http://openweathermap.org/img/wn/" + weatherIcon + ".png";
                     Picasso.get().load(Uri.parse(iconUrl)).into(imgWeatherIcon);
-//                    Glide.with(MainActivity.this).load("url").into(imgWeatherIcon);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -102,17 +97,12 @@ public class MainActivity extends AppCompatActivity {
                 city = WeatherClass.getName();
                 txtCity.setText(city);
 
-                //minTemp = WeatherClass.getMain().getTempMin();
-               // txtMinTemp.setText(minTemp.toString() + "°C");
-
-               // maxTemp = WeatherClass.getMain().getTempMax();
-               // txtMaxTemp.setText(maxTemp.toString() + "°C");
 
                 mainTemp = WeatherClass.getMain().getTemp();
-                txtMainTemp.setText(mainTemp.toString() + "°C");
+                txtMainTemp.setText("Temperature : " + mainTemp.toString() + "°C");
 
                 windSpeed = WeatherClass.getWind().getSpeed();
-                txtWindSpeed.setText(windSpeed.toString() + "m/s");
+                txtWindSpeed.setText("WindSpeed : " + windSpeed.toString() + "m/s");
 
             }
 
@@ -130,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button btnForcase =findViewById(R.id.btnForcast);
+        Button btnForcase =findViewById(R.id.btnForecast);
         btnForcase.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
 
-                city = WeatherClass.getName();
+            /    city = WeatherClass.getName();
                 txtCity.setText(city);
 
 

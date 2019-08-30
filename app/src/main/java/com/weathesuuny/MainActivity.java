@@ -54,8 +54,6 @@ public class MainActivity extends AppCompatActivity {
         txtCity = findViewById(R.id.txtcity);
         txtWeatherType = findViewById(R.id.txtweather);
         txtWeatherDescription = findViewById(R.id.txtDescription);
-        txtMinTemp = findViewById(R.id.txtminTemp);
-        txtMaxTemp = findViewById(R.id.txtmaxTemp);
         txtMainTemp = findViewById(R.id.txtMainTemp);
         txtWindSpeed = findViewById(R.id.txtWindSpeed);
 
@@ -132,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button btnForcase =findViewById(R.id.btnForcase);
+        Button btnForcase =findViewById(R.id.btnForcast);
         btnForcase.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
